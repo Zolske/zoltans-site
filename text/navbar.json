@@ -1,0 +1,97 @@
+{
+  "home": {
+    "eng": {
+      "title": "Welcome to Zoltan's Website",
+      "description": "Take a look around and have fun.",
+      "link_title": "home",
+      "hover_title": "link to 'Home' page"
+    },
+    "de": {
+      "title": "Willkommen zu Zoltan's Website",
+      "description": "Schau dich ruhig um und hab Spaß.",
+      "link_title": "home",
+      "hover_title": "link zur 'Home' Seite"
+    },
+    "icon": "bi bi-house-door"
+  },
+
+  "about": {
+    "eng": {
+      "title": "About Zoltan",
+      "description": "Find out more about Zoltan",
+      "link_title": "about Zoltan",
+      "hover_title": "link to 'About' page"
+    },
+    "de": {
+      "title": "Über Zoltan.",
+      "description": "Erfahren Sie mehr über Zoltan.",
+      "link_title": "über Zoltan",
+      "hover_title": "link zur 'Über' Seite"
+    },
+    "icon": "bi bi-person-vcard"
+  },
+
+  "certificates": {
+    "eng": {
+      "title": "Zoltan's Certificates",
+      "description": "My badges of 'achievement'.",
+      "link_title": "certificates",
+      "hover_title": "link to 'Certificate' page"
+    },
+    "de": {
+      "title": "Zoltan's Zertifikate",
+      "description": "Meine 'Leistungs Abzeichen'.",
+      "link_title": "Zertifikate",
+      "hover_title": "link zur 'Zertifikaten' Seite"
+    },
+    "icon": "bi bi-award"
+  },
+
+  "projects": {
+    "eng": {
+      "title": "Zoltan's projects",
+      "description": "A collection of my projects.",
+      "link_title": "projects",
+      "hover_title": "link to 'Projects' page"
+    },
+    "de": {
+      "title": "Zoltan's Projekte",
+      "description": "Eine Sammlung meiner Projekte.",
+      "link_title": "Projekte",
+      "hover_title": "link zur 'Projek' Seite"
+    },
+    "icon": "bi bi-code-slash"
+  },
+
+  "notes": {
+    "eng": {
+      "title": "Zoltan's Notes",
+      "description": "Important notes, I like to keep for later references.",
+      "link_title": "notes",
+      "hover_title": "link to 'Notes' page"
+    },
+    "de": {
+      "title": "Zoltan's Notizen",
+      "description": "Wichtige Notizen, die ich gerne für spätere Referenzen aufbewahre.",
+      "link_title": "Notizen",
+      "hover_title": "link zur 'Notz' Seite"
+    },
+    "icon": "bi bi-pencil-square"
+  },
+
+  "apps": {
+    "eng": {
+      "title": "Zoltan's Apps",
+      "description": "Applications which can make your life easier.",
+      "link_title": "apps",
+      "hover_title": "link to 'Applications' page"
+    },
+    "de": {
+      "title": "Zoltan's Apps",
+      "description": "Anwendungen, die Ihnen das Leben erleichtern können.",
+      "link_title": "apps",
+      "hover_title": "link zur 'App' Seite"
+    },
+    "icon": "bi bi-controller"
+  }
+}

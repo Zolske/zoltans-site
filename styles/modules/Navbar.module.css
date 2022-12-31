@@ -1,0 +1,145 @@
+.container_navbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field_image {
+  width: 100%;
+  background-color: var(--color-nav-image);
+  height: 250px;
+}
+
+.container_title_link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.field_title {
+  width: 100%;
+  flex-grow: 1;
+text-align:center;
+padding-top: 30px;
+}
+
+.field_links {
+  width: 100%;
+  height:fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link_home,
+.link_about,
+.link_certificates,
+.link_projects,
+.link_notes,
+.link_apps {
+    width: 50%;
+    height: fit-content;
+  text-align: center;
+}
+
+.link_home {
+  background-color: var(--color-home);
+}
+
+.link_about {
+  background-color: var(--color-about);
+}
+
+.link_certificates {
+  background-color: var(--color-certificates)
+}
+
+.link_projects {
+  background-color: var(--color-projects);
+}
+
+.link_notes {
+  background-color: var(--color-notes);
+}
+
+.link_apps {
+  background-color: var(--color-apps);
+}
+
+.icon_svg{
+  fill: var(--color-text-title);
+  font-size: 27px;
+  margin-right: 5px;
+}
+
+/* do not add other properties then "background-color",
+for changing the title background color when link is clicked */
+.back_color_home{
+  background-color: var(--color-home);
+}
+.back_color_about{
+  background-color: var(--color-about);
+}
+.back_color_certificates{
+  background-color: var(--color-certificates);
+}
+.back_color_projects{
+  background-color: var(--color-projects);
+}
+.back_color_notes{
+  background-color: var(--color-notes);
+}
+.back_color_apps{
+  background-color: var(--color-apps);
+}
+
+
+/* >>> MEDIA QUERIES ///////////////////////////////////////////////////*/
+/* Bootstrap Extra small None <576px */
+@media screen and (max-width: 576px) {
+}
+
+/* Bootstrap Small sm ≥576px */
+@media screen and (min-width: 576px) {
+  .field_image {
+    width: 33%;
+  }
+  .container_title_link {
+    width: 67%;
+  }
+  .link_home,
+  .link_about,
+  .link_certificates,
+  .link_projects,
+  .link_notes,
+  .link_apps {
+    text-align: center;
+    width: 33.333%;
+  }
+}
+
+/* Bootstrap Medium	md	≥768px */
+@media screen and (min-width: 768px) {
+}
+
+/* Bootstrap Large lg ≥992px */
+@media screen and (min-width: 992px) {
+}
+
+/* Bootstrap Extra large  xl ≥1200px */
+@media screen and (min-width: 1200px) {
+  .link_home,
+  .link_about,
+  .link_certificates,
+  .link_projects,
+  .link_notes,
+  .link_apps {
+    text-align: center;
+    width: 16.666%;
+  }
+}
+
+/* Bootstrap Extra extra large xxl ≥1400px */
+@media screen and (min-width: 1400px) {
+}
+/* <<< MEDIA QUERIES ///////////////////////////////////////////////////*/
