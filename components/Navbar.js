@@ -1,17 +1,11 @@
 import styles from "../styles/modules/Navbar.module.css";
 import { useState } from "react";
-import HomeSVG from "../assets/svg/home.svg";
-import AboutSVG from "../assets/svg/about_me.svg";
-import CertificateSVG from "../assets/svg/award.svg";
-import ProjectsSVG from "../assets/svg/code_slash.svg";
-import AppsSVG from "../assets/svg/controller.svg";
-import NotesSVG from "../assets/svg/pencil-square.svg";
 
-// import text from "../text/navbar.json";
 const textJson = require("../text/navbar.json");
-const language = "eng";
+const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)
 
 export default function Navbar() {
+  // set the default title field text and background color based on the "navbar.json" and Navbar.module
   const [pageTitle, setPageTitle] = useState(textJson.home[language].title);
   const [pageDescription, setPageDescription] = useState(
     textJson.home[language].description
@@ -20,6 +14,12 @@ export default function Navbar() {
     styles.back_color_home
   );
 
+  /**
+   * Handels the click event on an link element, changes the title, description and background color
+   * @param {string} title of the page heading
+   * @param {string} description under the page heading
+   * @param {styles} backColor background color of the title element (refers to style class)
+   */
   function handleLinkClick(title, description, backColor) {
     setPageTitle(title);
     setPageDescription(description);
@@ -29,8 +29,10 @@ export default function Navbar() {
   return (
     <nav>
       <div className={`${styles.container_navbar}`}>
+        {/* image element */}
         <div className={`${styles.field_image}`}>image</div>
         <div className={`${styles.container_title_link}`}>
+          {/* title element */}
           <header className={`${styles.field_title} ${backgroundColor}`}>
             <h1>{pageTitle}</h1>
             <p>{pageDescription}</p>
@@ -39,7 +41,7 @@ export default function Navbar() {
             {/* 6 individual link elements */}
             {/* home link */}
             <div
-              className={`${styles.link_home}`}
+              className={`${styles.link_home} third`}
               aria-label={textJson.home[language].hover_title}
               title={textJson.home[language].hover_title}
               onClick={() =>

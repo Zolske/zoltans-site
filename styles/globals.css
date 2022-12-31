@@ -1,12 +1,12 @@
 :root {
 
   /* colors */
---color-home:lightskyblue;
---color-about: orangered;
---color-certificates: limegreen;
---color-projects: dodgerblue;
---color-notes: peru;
---color-apps: DarkOrange;
+--color-home:LightSkyBlue; /*hsl(203, 92%, 75%) */
+--color-about: OrangeRed;  /*hsl(16, 100%, 50%) */
+--color-certificates: limegreen; /*hsl(120, 61%, 50%) limegreen*/
+--color-projects: dodgerblue; /*hsl(210, 100%, 56%) dodgerblue*/
+--color-notes: peru; /*hsl(30, 59%, 53%) peru*/
+--color-apps: DarkOrange; /*hsl(33, 100%, 50%) DarkOrange*/
 --color-nav-image: moccasin;
 --color-text-title: #5b4f3f;
 
@@ -17,3 +17,53 @@ p {
   font-family: 'Merienda', cursive;
   color: var(--color-text-title);
 }
+
+.btn {
+/* box-sizing: border-box; */
+  /* -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent; */
+  /* border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c; */
+
+  /* display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center; */
+  /* font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em; */
+  /* text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; */
+}
+/* .btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+} */
+
+/* .third { */
+  /* border-color: #3498db;*/
+  /* background-color: #fff !important; */
+  /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
+  /* box-shadow: 0 0 40px 40px #85cdfa inset, 0 0 0 0 #85cdfa; */
+  /* box-shadow: 0 0 40px 40px var(--color-home) inset, 0 0 0 0 var(--color-home);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; */
+  /* filter: brightness(85%); */
+/* }
+.third:hover { */
+  /* filter: brightness(0.9); */
+  /* box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db; */
+  /* box-shadow: 0 0 20px 0 #54b9f8 inset, 0 0 20px 4px #54b9f8;
+  z-index: 1; */
+/* } */
