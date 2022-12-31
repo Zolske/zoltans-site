@@ -1,5 +1,7 @@
 import styles from "../styles/modules/Navbar.module.css";
 import { useState } from "react";
+import Image from "next/image";
+import profilePicture from "../assets/images/profile/me2021red.webp";
 
 const textJson = require("../text/navbar.json");
 const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)
@@ -30,7 +32,15 @@ export default function Navbar() {
     <nav>
       <div className={`${styles.container_navbar}`}>
         {/* image element */}
-        <div className={`${styles.field_image}`}>image</div>
+        <div className={`${styles.field_image}`}>
+          <Image
+            src={profilePicture}
+            // height={292}
+            // width={200}
+            className={styles.profilePicture}
+            alt="Zoltan's profile picture"
+          />
+        </div>
         <div className={`${styles.container_title_link}`}>
           {/* title element */}
           <header className={`${styles.field_title} ${backgroundColor}`}>
@@ -41,7 +51,7 @@ export default function Navbar() {
             {/* 6 individual link elements */}
             {/* home link */}
             <div
-              className={`${styles.link_home} third`}
+              className={`${styles.link_home}`}
               aria-label={textJson.home[language].hover_title}
               title={textJson.home[language].hover_title}
               onClick={() =>

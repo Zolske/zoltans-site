@@ -1,5 +1,4 @@
 .container_navbar {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -7,7 +6,18 @@
 .field_image {
   width: 100%;
   background-color: var(--color-nav-image);
-  height: 250px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.profilePicture {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: solid 4px lightgrey;
+  box-shadow: 5px 5px 10px lightgrey;
+  align-self: center;
 }
 
 .container_title_link {
@@ -20,13 +30,13 @@
 .field_title {
   width: 100%;
   flex-grow: 1;
-text-align:center;
-padding-top: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .field_links {
   width: 100%;
-  height:fit-content;
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,8 +47,8 @@ padding-top: 30px;
 .link_projects,
 .link_notes,
 .link_apps {
-    width: 50%;
-    height: fit-content;
+  width: 50%;
+  height: fit-content;
   text-align: center;
   cursor: pointer;
   background-color: #fff;
@@ -50,7 +60,8 @@ padding-top: 30px;
   transition: all 300ms ease-in-out;
 }
 .link_home:hover {
-  box-shadow: 0 0 20px 0 hsl(203, 92%, 65%) inset, 0 0 20px 4px hsl(203, 92%, 65%);
+  box-shadow: 0 0 20px 0 hsl(203, 92%, 65%) inset,
+    0 0 20px 4px hsl(203, 92%, 65%);
   z-index: 1;
 }
 
@@ -60,27 +71,32 @@ padding-top: 30px;
   transition: all 300ms ease-in-out;
 }
 .link_about:hover {
-  box-shadow: 0 0 20px 0 hsl(16, 100%, 40%) inset, 0 0 20px 4px hsl(16, 100%, 40%);
+  box-shadow: 0 0 20px 0 hsl(16, 100%, 40%) inset,
+    0 0 20px 4px hsl(16, 100%, 40%);
   z-index: 1;
 }
 
 .link_certificates {
-  box-shadow: 0 0 40px 40px var(--color-certificates) inset, 0 0 0 0 var(--color-certificates);
+  box-shadow: 0 0 40px 40px var(--color-certificates) inset,
+    0 0 0 0 var(--color-certificates);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 .link_certificates:hover {
-  box-shadow: 0 0 20px 0 hsl(120, 61%, 40%) inset, 0 0 20px 4px hsl(120, 61%, 40%);
+  box-shadow: 0 0 20px 0 hsl(120, 61%, 40%) inset,
+    0 0 20px 4px hsl(120, 61%, 40%);
   z-index: 1;
 }
 
 .link_projects {
-  box-shadow: 0 0 40px 40px var(--color-projects) inset, 0 0 0 0 var(--color-projects);
+  box-shadow: 0 0 40px 40px var(--color-projects) inset,
+    0 0 0 0 var(--color-projects);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 .link_projects:hover {
-  box-shadow: 0 0 20px 0 hsl(210, 100%, 46%) inset, 0 0 20px 4px hsl(210, 100%, 46%);
+  box-shadow: 0 0 20px 0 hsl(210, 100%, 46%) inset,
+    0 0 20px 4px hsl(210, 100%, 46%);
   z-index: 1;
 }
 
@@ -100,11 +116,12 @@ padding-top: 30px;
   transition: all 300ms ease-in-out;
 }
 .link_apps:hover {
-  box-shadow: 0 0 20px 0 hsl(33, 100%, 40%) inset, 0 0 20px 4px hsl(33, 100%, 40%);
+  box-shadow: 0 0 20px 0 hsl(33, 100%, 40%) inset,
+    0 0 20px 4px hsl(33, 100%, 40%);
   z-index: 1;
 }
 
-.icon_svg{
+.icon_svg {
   fill: var(--color-text-title);
   font-size: 27px;
   margin-right: 5px;
@@ -112,25 +129,24 @@ padding-top: 30px;
 
 /* do not add other properties then "background-color",
 for changing the title background color when link is clicked */
-.back_color_home{
+.back_color_home {
   background-color: var(--color-home);
 }
-.back_color_about{
+.back_color_about {
   background-color: var(--color-about);
 }
-.back_color_certificates{
+.back_color_certificates {
   background-color: var(--color-certificates);
 }
-.back_color_projects{
+.back_color_projects {
   background-color: var(--color-projects);
 }
-.back_color_notes{
+.back_color_notes {
   background-color: var(--color-notes);
 }
-.back_color_apps{
+.back_color_apps {
   background-color: var(--color-apps);
 }
-
 
 /* >>> MEDIA QUERIES ///////////////////////////////////////////////////*/
 /* Bootstrap Extra small None <576px */
