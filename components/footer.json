@@ -1,0 +1,14 @@
+{
+  "eng": {
+    "title_footer": "contact me",
+    "linkedin": "link to the 'Linkedin' website",
+    "email": "opens the email app with Zoltan's email address",
+    "github": "link to the 'GitHub' website"
+  },
+  "de": {
+    "title_footer": "kontaktiere mich",
+    "linkedin": "link zu der 'Linkedin' Webseite",
+    "email": "öffnet die email app mit Zoltan's email Adresse",
+    "github": "link zu der 'GitHub' Webseite"
+  }
+}

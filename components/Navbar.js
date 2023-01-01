@@ -1,9 +1,9 @@
-import styles from "../styles/modules/Navbar.module.css";
+import styles from "./Navbar.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import profilePicture from "../assets/images/profile/me2021red.webp";
 
-const textJson = require("../text/navbar.json");
+const textJson = require("./navbar.json");
 const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)
 
 export default function Navbar() {

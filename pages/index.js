@@ -2,6 +2,7 @@ import Head from "next/head"; // for Google fonts
 import styles from "../styles/Home.module.css";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       </Head>
       <Navbar />
+
       <main className={styles.main}></main>
+      <Footer />
     </>
   );
 }
