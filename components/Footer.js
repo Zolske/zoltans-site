@@ -14,6 +14,7 @@ export default function Footer() {
         <a
           href="https://www.linkedin.com/in/zolt%C3%A1n-kepes-b1922b1bb/?originalSubdomain=uk"
           target="_blank"
+          rel="noopener noreferrer"
           className={styles.linkedin}
           title={textJson[language].linkedin}
           aria-label={textJson[language].linkedin}
@@ -33,6 +34,7 @@ export default function Footer() {
         <a
           href="https://github.com/Zolske?tab=repositories"
           target="_blank"
+          rel="noopener noreferrer"
           className={styles.github}
           title={textJson[language].github}
           aria-label={textJson[language].github}
