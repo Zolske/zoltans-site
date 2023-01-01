@@ -23,7 +23,7 @@ export default function Footer() {
           <p>Linkedin</p>
         </a>
         <a
-          href="mailto:email@example.com?subject=feedback to Zoltan's Website"
+          href="mailto:zoltan.the.kepes@gmail.com?subject=feedback to Zoltan's Website"
           className={styles.email}
           title={textJson[language].email}
           aria-label={textJson[language].email}
