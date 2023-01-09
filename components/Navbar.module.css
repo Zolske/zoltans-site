@@ -53,6 +53,7 @@
   text-align: center;
   cursor: pointer;
   background-color: var(--color-main-background);
+  color: var(--color-text-title);
 }
 
 .link_home {

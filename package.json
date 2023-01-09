@@ -10,13 +10,18 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
+    "directory-tree": "^3.5.1",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
+    "gray-matter": "^4.0.3",
     "next": "13.1.1",
+    "path": "^0.12.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",

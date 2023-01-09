@@ -1,8 +1,26 @@
 import Head from "next/head"; // for Google fonts
-import styles from "../styles/Home.module.css";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import { getSortedPostsData } from "../lib/posts";
+
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
+
+// { allPostsData }
+
+// export async function getStaticProps() {
+//   const allPostsData = getSortedPostsData();
+//   return {
+//     props: {
+//       allPostsData,
+//     },
+//   };
+// }
 
 export default function Home() {
   return (
@@ -15,10 +33,20 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       </Head>
-      <Navbar />
-
-      <main className={styles.main}></main>
-      <Footer />
+      <section>
+        <h2>Blog</h2>
+        {/* <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul> */}
+      </section>
     </>
   );
 }

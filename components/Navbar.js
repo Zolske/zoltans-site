@@ -2,6 +2,17 @@ import styles from "./Navbar.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import profilePicture from "../assets/images/profile/me2021red.webp";
+import NavbarLinks from "./NavbarLinks";
+
+let navLinkNotes = require("../assets/data/nav_links/nav_notes.json");
+// navLinkNotes = navLinkNotes.navLinkNotes;
+// console.log(navLinkNotes);
+// for (const property in navLinkNotes) {
+//   console.log(`${property}: ${navLinkNotes[property].title}`);
+// }
+// let navLinkObj = JSON.parse(navLinkJson);
+// navLinkJson.children = "hello";
+// console.log(navLinkJson.children[0].children);
 
 const textJson = require("./navbar.json");
 const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)
@@ -35,8 +46,6 @@ export default function Navbar() {
         <div className={`${styles.field_image}`}>
           <Image
             src={profilePicture}
-            // height={292}
-            // width={200}
             className={styles.profilePicture}
             alt="Zoltan's profile picture"
           />
@@ -150,6 +159,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      <NavbarLinks jsonObject={navLinkNotes} />
     </nav>
   );
 }
