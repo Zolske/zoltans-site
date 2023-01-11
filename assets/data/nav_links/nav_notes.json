@@ -16,7 +16,8 @@
         "directories": ["notes", "javascript"],
         "path": "pages/notes/javascript/variables.js"
       }
-    ]
+    ],
+    "icon": "/icons/javascript.svg"
   },
   {
     "dirTitle": "React",
@@ -35,6 +36,7 @@
         "directories": ["notes", "react"],
         "path": "pages/notes/react/context_variable.js"
       }
-    ]
+    ],
+    "icon": false
   }
 ]

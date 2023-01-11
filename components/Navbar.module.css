@@ -60,6 +60,7 @@
   box-shadow: 0 0 40px 40px var(--color-home) inset, 0 0 0 0 var(--color-home);
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+
 }
 .link_home:hover {
   box-shadow: 0 0 20px 0 hsl(203, 92%, 65%) inset,
@@ -149,6 +150,23 @@ for changing the title background color when link is clicked */
 .back_color_apps {
   background-color: var(--color-apps);
 }
+
+/* container for the page links */
+.nav_background{
+  margin: 0 50px;
+  background-color: rgba(255, 235, 205, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 40px;
+  display: flex;
+
+}
+
+/* .link_notes:hover .nav_container {
+  display: block;
+  background-color: yellow;
+} */
 
 /* >>> MEDIA QUERIES ///////////////////////////////////////////////////*/
 /* Bootstrap Extra small None <576px */

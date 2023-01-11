@@ -34,7 +34,6 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       </Head>
       <section>
-        <h2>Blog</h2>
         {/* <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>

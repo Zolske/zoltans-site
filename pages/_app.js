@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
+import Navbar_2 from "../components/Navbar_2";
 import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }) {
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
+      <Navbar_2 />
       <main className="main_style">
         <Component {...pageProps} />
       </main>

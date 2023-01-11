@@ -159,7 +159,10 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <NavbarLinks jsonObject={navLinkNotes} />
+      <NavbarLinks
+        jsonObject={navLinkNotes}
+        classContainer={styles.nav_background}
+      />
     </nav>
   );
 }
