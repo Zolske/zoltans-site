@@ -3,166 +3,220 @@ import { useState } from "react";
 import Image from "next/image";
 import profilePicture from "../assets/images/profile/me2021red.webp";
 import NavbarLinks from "./NavbarLinks";
+import NavButton from "./NavButton";
 
-let navLinkNotes = require("../assets/data/nav_links/nav_notes.json");
-// navLinkNotes = navLinkNotes.navLinkNotes;
-// console.log(navLinkNotes);
-// for (const property in navLinkNotes) {
-//   console.log(`${property}: ${navLinkNotes[property].title}`);
-// }
-// let navLinkObj = JSON.parse(navLinkJson);
-// navLinkJson.children = "hello";
-// console.log(navLinkJson.children[0].children);
+// let navLinkNotes = require("../assets/data/nav_links/nav_notes.json");
+// let navLinkNotes = false;
+// let navLinkProjects = require("../assets/data/nav_links/nav_projects.json");
+// navLinkProjects = navLinkProjects.length === 0 ? false : navLinkProjects;
 
-const textJson = require("./navbar.json");
-const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)
+let navLinkProjects = navLinkFilter("nav_projects.json");
+let navLinkNotes = navLinkFilter("nav_notes.json");
+let navLinkAbout = navLinkFilter("nav_about.json");
+let navLinkApps = navLinkFilter("nav_apps.json");
+let navLinkCertificates = navLinkFilter("nav_certificates.json");
 
 export default function Navbar() {
   // set the default title field text and background color based on the "navbar.json" and Navbar.module
-  const [pageTitle, setPageTitle] = useState(textJson.home[language].title);
+  const [pageTitle, setPageTitle] = useState(navButtonLinks[0].titlePage);
   const [pageDescription, setPageDescription] = useState(
-    textJson.home[language].description
+    navButtonLinks[0].titleDescription
   );
-  const [backgroundColor, setBackgroundColor] = useState(
-    styles.back_color_home
+  const [pageBackground, setPageBackground] = useState(
+    navButtonLinks[0].titleBackground
   );
+
+  const [showNoteLinks, setShowNoteLinks] = useState("none");
+  navButtonLinks[5].showLinks = showNoteLinks;
+  const [showProjectsLinks, setShowProjectsLinks] = useState("none");
+  navButtonLinks[3].showLinks = showProjectsLinks;
+  // navLinkProjects.length === 0 ? false : showProjectsLinks;
+
+  function setShowLinks(whatLink) {
+    if (whatLink === "notes") {
+      setShowNoteLinks("block");
+    }
+    if (whatLink === "projects") {
+      setShowProjectsLinks("block");
+    }
+  }
+
+  function unsetShowLinks() {
+    if (showNoteLinks) {
+      setShowNoteLinks("none");
+    }
+    if (showProjectsLinks) {
+      setShowProjectsLinks("none");
+    }
+  }
 
   /**
    * Handels the click event on an link element, changes the title, description and background color
    * @param {string} title of the page heading
    * @param {string} description under the page heading
-   * @param {styles} backColor background color of the title element (refers to style class)
+   * @param {styles} background background image of the title element
    */
-  function handleLinkClick(title, description, backColor) {
-    setPageTitle(title);
+  function handleLinkClick(page_title, description, background) {
+    setPageTitle(page_title);
     setPageDescription(description);
-    setBackgroundColor(backColor);
+    setPageBackground(background);
   }
 
   return (
-    <nav>
-      <div className={`${styles.container_navbar}`}>
-        {/* image element */}
-        <div className={`${styles.field_image}`}>
-          <Image
+    <>
+      <div className={styles.grid_container}>
+        <div className={styles.area_logo}>
+          logo
+          {/* <Image
             src={profilePicture}
             className={styles.profilePicture}
             alt="Zoltan's profile picture"
+          /> */}
+        </div>
+        <header className={styles.area_title}>
+          <h1>{pageTitle}</h1>
+          <p>{pageDescription}</p>
+          <Image
+            src={pageBackground}
+            className={styles.title_background}
+            alt=""
+            fill
+            style={{
+              objectFit: "cover",
+            }}
           />
-        </div>
-        <div className={`${styles.container_title_link}`}>
-          {/* title element */}
-          <header className={`${styles.field_title} ${backgroundColor}`}>
-            <h1>{pageTitle}</h1>
-            <p>{pageDescription}</p>
-          </header>
-          <div className={`${styles.field_links}`}>
-            {/* 6 individual link elements */}
-            {/* home link */}
-            <div
-              className={`${styles.link_home}`}
-              aria-label={textJson.home[language].hover_title}
-              title={textJson.home[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.home[language].title,
-                  textJson.home[language].description,
-                  styles.back_color_home
-                )
-              }
-            >
-              <i className={`${styles.icon_svg} ${textJson.home.icon}`}></i>
-              <span>{textJson.home[language].link_title}</span>
-            </div>
-            {/* about link */}
-            <div
-              className={`${styles.link_about}`}
-              aria-label={textJson.about[language].hover_title}
-              title={textJson.about[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.about[language].title,
-                  textJson.about[language].description,
-                  styles.back_color_about
-                )
-              }
-            >
-              <i className={`${styles.icon_svg} ${textJson.about.icon}`}></i>
-              <span>{textJson.about[language].link_title}</span>
-            </div>
-            {/* certificates link */}
-            <div
-              className={`${styles.link_certificates}`}
-              aria-label={textJson.certificates[language].hover_title}
-              title={textJson.certificates[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.certificates[language].title,
-                  textJson.certificates[language].description,
-                  styles.back_color_certificates
-                )
-              }
-            >
-              <i
-                className={`${styles.icon_svg} ${textJson.certificates.icon}`}
-              ></i>
-              <span>{textJson.certificates[language].link_title}</span>
-            </div>{" "}
-            {/* projects link */}
-            <div
-              className={`${styles.link_projects}`}
-              aria-label={textJson.projects[language].hover_title}
-              title={textJson.projects[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.projects[language].title,
-                  textJson.projects[language].description,
-                  styles.back_color_projects
-                )
-              }
-            >
-              <i className={`${styles.icon_svg} ${textJson.projects.icon}`}></i>
-              <span>{textJson.projects[language].link_title}</span>
-            </div>
-            {/* notes link */}
-            <div
-              className={`${styles.link_notes}`}
-              aria-label={textJson.notes[language].hover_title}
-              title={textJson.notes[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.notes[language].title,
-                  textJson.notes[language].description,
-                  styles.back_color_notes
-                )
-              }
-            >
-              <i className={`${styles.icon_svg} ${textJson.notes.icon}`}></i>
-              <span>{textJson.notes[language].link_title}</span>
-            </div>
-            {/* apps link */}
-            <div
-              className={`${styles.link_apps}`}
-              aria-label={textJson.apps[language].hover_title}
-              title={textJson.apps[language].hover_title}
-              onClick={() =>
-                handleLinkClick(
-                  textJson.apps[language].title,
-                  textJson.apps[language].description,
-                  styles.back_color_apps
-                )
-              }
-            >
-              <i className={`${styles.icon_svg} ${textJson.apps.icon}`}></i>
-              <span>{textJson.apps[language].link_title}</span>
-            </div>
-          </div>
-        </div>
+        </header>
       </div>
-      <NavbarLinks
-        jsonObject={navLinkNotes}
-        classContainer={styles.nav_background}
-      />
-    </nav>
+      <div className={styles.grid_container_sticky}>
+        <nav className={styles.area_login}>login</nav>
+        <nav className={styles.area_pages}>
+          {navButtonLinks.map((link) => {
+            return (
+              <NavButton
+                key={link.btn_title}
+                style={styles.page_btn}
+                label={link.label}
+                icon={link.icon}
+                index_link={link.index_link}
+                title={link.btn_title}
+                subMenu={link.subMenu}
+                handleLinkClick={handleLinkClick}
+                setShowLinks={setShowLinks}
+                page_title={link.titlePage}
+                page_description={link.titleDescription}
+                page_background={link.titleBackground}
+              />
+            );
+          })}
+        </nav>
+        {navButtonLinks.map((link) => {
+          if (link.subMenu) {
+            return (
+              <NavbarLinks
+                key={link.btn_title}
+                jsonObject={link.subMenu}
+                showLinks={link.showLinks}
+                styles_area_links={styles.area_links}
+                unsetShowLinks={unsetShowLinks}
+                btn_title={link.btn_title}
+              />
+            );
+          }
+        })}
+      </div>
+    </>
   );
 }
+
+/**
+ * Filters the navLink Json files which have to be located in "../assets/data/nav_links/".
+ * The purpose of the function is to avoid creating empty "navlists" or folders which contain the index file or
+ * any other file which are located in the base folder. E.g. "pages/notes/index.js" -> do not include "index" as link
+ * nor a folder "notes"
+ * 1. returns "false" if Json is an empty array
+ * 2. removes folders from Json which are by default ["about", "apps", "certificates", "notes", "projects"],
+ * but can be overwritten with new array in second argument
+ * @param {string} json_file json file e.g. nav_notes.json
+ * @param {array} except_index array containing folders which should not be included in json, e.g. ["notes"]
+ * @returns false if array is empty or filter out specific folders
+ */
+function navLinkFilter(
+  json_file,
+  except_index = ["about", "apps", "certificates", "notes", "projects"]
+) {
+  let json = require("../assets/data/nav_links/" + json_file);
+  let filteredJson = json.filter(
+    (property) => !except_index.includes(property.dirTitle.toLowerCase())
+  );
+  return filteredJson.length === 0 ? false : filteredJson;
+}
+
+let navButtonLinks = [
+  {
+    btn_title: "home",
+    label: "opens the 'home' page",
+    icon: "bi bi-house-door",
+    index_link: "/",
+    subMenu: false,
+    titlePage: "Welcome to Zoltan's Website",
+    titleDescription:
+      "This is my place to keep and show my work. Feel free to browse around.",
+    titleBackground: "/images/background/clouds.webp",
+    showLinks: false,
+  },
+  {
+    btn_title: "about",
+    label: "opens the 'about' page",
+    icon: "bi bi-person-vcard",
+    index_link: "/about",
+    subMenu: navLinkAbout,
+    titlePage: "About Zoltan",
+    titleDescription: "Here you can find out more about me.",
+    titleBackground: "/images/background/wallart.webp",
+    showLinks: false,
+  },
+  {
+    btn_title: "certificates",
+    label: "opens the 'certificates' page",
+    icon: "bi bi-award",
+    index_link: "/certificates",
+    subMenu: navLinkCertificates,
+    titlePage: "Certificates",
+    titleDescription: "Some of my achievements and certificates.",
+    titleBackground: "/images/background/certificate.webp",
+    showLinks: false,
+  },
+  {
+    btn_title: "projects",
+    label: "opens the 'projects' page",
+    icon: "bi bi-code-slash",
+    index_link: "/projects",
+    subMenu: navLinkProjects,
+    titlePage: "Projects",
+    titleDescription: "Projects and experiments.",
+    titleBackground: "/images/background/coding.webp",
+    showLinks: false,
+  },
+  {
+    btn_title: "apps",
+    label: "opens the 'apps' page",
+    icon: "bi bi-controller",
+    index_link: "/apps",
+    subMenu: navLinkApps,
+    titlePage: "Applications",
+    titleDescription: "Have a look and try some of my programs.",
+    titleBackground: "/images/background/apps.webp",
+    showLinks: false,
+  },
+  {
+    btn_title: "notes",
+    label: "opens the 'notes' page",
+    icon: "bi bi-pencil-square",
+    index_link: "/notes",
+    subMenu: navLinkNotes,
+    titlePage: "Notes",
+    titleDescription: "Important notes which I keep as reference.",
+    titleBackground: "/images/background/paper.webp",
+    showLinks: false,
+  },
+];

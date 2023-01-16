@@ -45,6 +45,7 @@ export default function Home() {
             </li>
           ))}
         </ul> */}
+        <h1>Home</h1>
       </section>
     </>
   );

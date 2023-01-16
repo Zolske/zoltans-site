@@ -1,195 +1,88 @@
-.container_navbar {
-  display: flex;
-  flex-wrap: wrap;
+/* >>> nav-grid ///////////////////////////////////////////////////////////// */
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logo title";
 }
 
-.field_image {
-  width: 100%;
-  background-color: var(--color-nav-image);
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+.area_logo {
+  grid-area: logo;
+  background-color: var(--color-main-header);
 }
 
-.profilePicture {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: solid 4px var(--color-main-background);
-  box-shadow: 5px 5px 10px var(--color-main-background);
-  align-self: center;
-}
-
-.container_title_link {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.field_title {
-  width: 100%;
-  flex-grow: 1;
+.area_title {
+  grid-area: title;
   text-align: center;
-  padding-top: 30px;
-  /* border-bottom: dashed 2px var(--color-text-title); */
+  padding: 30px 20% 10px 0;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.field_links {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
+.title_background {
+  z-index: -1;
 }
 
-.link_home,
-.link_about,
-.link_certificates,
-.link_projects,
-.link_notes,
-.link_apps {
-  width: 50%;
-  height: fit-content;
-  text-align: center;
-  cursor: pointer;
-  background-color: var(--color-main-background);
-  color: var(--color-text-title);
+.grid_container_sticky {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "login pages"
+    "links links";
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.link_home {
-  box-shadow: 0 0 40px 40px var(--color-home) inset, 0 0 0 0 var(--color-home);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-
-}
-.link_home:hover {
-  box-shadow: 0 0 20px 0 hsl(203, 92%, 65%) inset,
-    0 0 20px 4px hsl(203, 92%, 65%);
-  z-index: 1;
+.area_login {
+  grid-area: login;
+  background-color: var(--color-main-header);
 }
 
-.link_about {
-  box-shadow: 0 0 40px 40px var(--color-about) inset, 0 0 0 0 var(--color-about);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.link_about:hover {
-  box-shadow: 0 0 20px 0 hsl(17, 100%, 64%) inset,
-    0 0 20px 4px hsl(17, 100%, 64%);
-  z-index: 1;
-}
-
-.link_certificates {
-  box-shadow: 0 0 40px 40px var(--color-certificates) inset,
-    0 0 0 0 var(--color-certificates);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.link_certificates:hover {
-  box-shadow: 0 0 20px 0 hsl(120, 61%, 40%) inset,
-    0 0 20px 4px hsl(120, 61%, 40%);
-  z-index: 1;
-}
-
-.link_projects {
-  box-shadow: 0 0 40px 40px var(--color-projects) inset,
-    0 0 0 0 var(--color-projects);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.link_projects:hover {
-  box-shadow: 0 0 20px 0 hsl(210, 100%, 46%) inset,
-    0 0 20px 4px hsl(210, 100%, 46%);
-  z-index: 1;
-}
-
-.link_notes {
-  box-shadow: 0 0 40px 40px var(--color-notes) inset, 0 0 0 0 var(--color-notes);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.link_notes:hover {
-  box-shadow: 0 0 20px 0 hsl(30, 59%, 43%) inset, 0 0 20px 4px hsl(30, 59%, 43%);
-  z-index: 1;
-}
-
-.link_apps {
-  box-shadow: 0 0 40px 40px var(--color-apps) inset, 0 0 0 0 var(--color-apps);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-.link_apps:hover {
-  box-shadow: 0 0 20px 0 hsl(33, 100%, 40%) inset,
-    0 0 20px 4px hsl(33, 100%, 40%);
-  z-index: 1;
-}
-
-.icon_svg {
-  color: var(--color-text-title);
-  font-size: 27px;
-  margin-right: 5px;
-}
-
-/* do not add other properties then "background-color",
-for changing the title background color when link is clicked */
-.back_color_home {
+.area_pages {
+  grid-area: pages;
   background-color: var(--color-home);
-}
-.back_color_about {
-  background-color: var(--color-about);
-}
-.back_color_certificates {
-  background-color: var(--color-certificates);
-}
-.back_color_projects {
-  background-color: var(--color-projects);
-}
-.back_color_notes {
-  background-color: var(--color-notes);
-}
-.back_color_apps {
-  background-color: var(--color-apps);
-}
-
-/* container for the page links */
-.nav_background{
-  margin: 0 50px;
-  background-color: rgba(255, 235, 205, 0.4);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 40px;
-  display: flex;
-
+  justify-content: space-around;
 }
 
-/* .link_notes:hover .nav_container {
+.area_links {
+  grid-area: links;
+  background-color: var(--color-main);
+  /* display: none; */
+}
+
+/* .grid_container_sticky:hover .area_links {
   display: block;
-  background-color: yellow;
 } */
 
-/* >>> MEDIA QUERIES ///////////////////////////////////////////////////*/
+/* >>> style for the link buttons */
+.page_btn {
+  background-color: green;
+}
+.page_btn a {
+  text-decoration: none;
+  color: black;
+}
+
+/* .page_btn:hover .area_links {
+  display: block;
+} */
+
+.page_btn span {
+  margin: 0 10px;
+}
+
+/* <<< nav-grid ///////////////////////////////////////////////////////////// */
+
+/* >>> MEDIA QUERIES /////////////////////////////////////////////////////////*/
 /* Bootstrap Extra small None <576px */
 @media screen and (max-width: 576px) {
 }
 
 /* Bootstrap Small sm ≥576px */
 @media screen and (min-width: 576px) {
-  .field_image {
-    width: 33%;
-  }
-  .container_title_link {
-    width: 67%;
-  }
-  .link_home,
-  .link_about,
-  .link_certificates,
-  .link_projects,
-  .link_notes,
-  .link_apps {
-    text-align: center;
-    width: 33.333%;
-  }
 }
 
 /* Bootstrap Medium	md	≥768px */
@@ -202,18 +95,9 @@ for changing the title background color when link is clicked */
 
 /* Bootstrap Extra large  xl ≥1200px */
 @media screen and (min-width: 1200px) {
-  .link_home,
-  .link_about,
-  .link_certificates,
-  .link_projects,
-  .link_notes,
-  .link_apps {
-    text-align: center;
-    width: 16.666%;
-  }
 }
 
 /* Bootstrap Extra extra large xxl ≥1400px */
 @media screen and (min-width: 1400px) {
 }
-/* <<< MEDIA QUERIES ///////////////////////////////////////////////////*/
+/* <<< MEDIA QUERIES /////////////////////////////////////////////////////////*/
