@@ -9,6 +9,11 @@
 .area_logo {
   grid-area: logo;
   background-color: var(--color-main-header);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .area_title {

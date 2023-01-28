@@ -1,9 +1,13 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
 import Image from "next/image";
-import profilePicture from "../assets/images/profile/me2021red.webp";
+import logo_icon from "../assets/images/logo/icon_red.png";
+import logo_zoltan from "../assets/images/logo/zoltan_blue.png";
+import logo_kepes from "../assets/images/logo/kepes_red.png";
 import NavbarLinks from "./NavbarLinks";
 import NavButton from "./NavButton";
+import TypeWriter from "./TypeWriter";
+import LogoWriter from "./LogoWriter";
 
 // let navLinkNotes = require("../assets/data/nav_links/nav_notes.json");
 // let navLinkNotes = false;
@@ -66,12 +70,13 @@ export default function Navbar() {
     <>
       <div className={styles.grid_container}>
         <div className={styles.area_logo}>
-          logo
-          {/* <Image
-            src={profilePicture}
-            className={styles.profilePicture}
-            alt="Zoltan's profile picture"
-          /> */}
+          <Image
+            src={logo_icon}
+            // className={styles.logo_icon}
+            alt="logo icon"
+            height={50}
+          />
+          <LogoWriter logo_1={"< ZOLTAN / "} logo_2={"KEPES "} logo_3={">"} />
         </div>
         <header className={styles.area_title}>
           <h1>{pageTitle}</h1>
