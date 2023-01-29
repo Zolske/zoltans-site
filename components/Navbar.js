@@ -6,13 +6,7 @@ import logo_zoltan from "../assets/images/logo/zoltan_blue.png";
 import logo_kepes from "../assets/images/logo/kepes_red.png";
 import NavbarLinks from "./NavbarLinks";
 import NavButton from "./NavButton";
-import TypeWriter from "./TypeWriter";
 import LogoWriter from "./LogoWriter";
-
-// let navLinkNotes = require("../assets/data/nav_links/nav_notes.json");
-// let navLinkNotes = false;
-// let navLinkProjects = require("../assets/data/nav_links/nav_projects.json");
-// navLinkProjects = navLinkProjects.length === 0 ? false : navLinkProjects;
 
 let navLinkProjects = navLinkFilter("nav_projects.json");
 let navLinkNotes = navLinkFilter("nav_notes.json");
@@ -30,28 +24,55 @@ export default function Navbar() {
     navButtonLinks[0].titleBackground
   );
 
-  const [showNoteLinks, setShowNoteLinks] = useState("none");
-  navButtonLinks[5].showLinks = showNoteLinks;
+  const [showHomeLinks, setShowHomeLinks] = useState("none");
+  navButtonLinks[0].showLinks = showHomeLinks;
+  const [showAboutLinks, setShowAboutLinks] = useState("none");
+  navButtonLinks[1].showLinks = showAboutLinks;
+  const [showCertificatesLinks, setShowCertificatesLinks] = useState("none");
+  navButtonLinks[2].showLinks = showCertificatesLinks;
   const [showProjectsLinks, setShowProjectsLinks] = useState("none");
   navButtonLinks[3].showLinks = showProjectsLinks;
-  // navLinkProjects.length === 0 ? false : showProjectsLinks;
+  const [showAppsLinks, setShowAppsLinks] = useState("none");
+  navButtonLinks[4].showLinks = showAppsLinks;
+  const [showNoteLinks, setShowNoteLinks] = useState("none");
+  navButtonLinks[5].showLinks = showNoteLinks;
 
   function setShowLinks(whatLink) {
-    if (whatLink === "notes") {
-      setShowNoteLinks("block");
-    }
-    if (whatLink === "projects") {
-      setShowProjectsLinks("block");
+    switch (whatLink) {
+      case "notes":
+        unsetShowLinks();
+        setShowNoteLinks("block");
+        break;
+      case "projects":
+        unsetShowLinks();
+        setShowProjectsLinks("block");
+        break;
+      case "certificates":
+        unsetShowLinks();
+        setShowCertificatesLinks("block");
+        break;
+      case "apps":
+        unsetShowLinks();
+        setShowAppsLinks("block");
+        break;
+      case "home":
+        unsetShowLinks();
+        setShowHomeLinks("block");
+        break;
+      case "about":
+        unsetShowLinks();
+        setShowAboutLinks("block");
+        break;
     }
   }
 
   function unsetShowLinks() {
-    if (showNoteLinks) {
-      setShowNoteLinks("none");
-    }
-    if (showProjectsLinks) {
-      setShowProjectsLinks("none");
-    }
+    setShowNoteLinks("none");
+    setShowProjectsLinks("none");
+    setShowCertificatesLinks("none");
+    setShowAppsLinks("none");
+    setShowHomeLinks("none");
+    setShowAboutLinks("none");
   }
 
   /**
@@ -78,7 +99,10 @@ export default function Navbar() {
           />
           <LogoWriter logo_1={"< ZOLTAN / "} logo_2={"KEPES "} logo_3={">"} />
         </div>
-        <header className={styles.area_title}>
+        <header
+          className={styles.area_title}
+          onMouseOver={() => unsetShowLinks()}
+        >
           <h1>{pageTitle}</h1>
           <p>{pageDescription}</p>
           <Image
@@ -89,6 +113,7 @@ export default function Navbar() {
             style={{
               objectFit: "cover",
             }}
+            priority="true"
           />
         </header>
       </div>
@@ -156,6 +181,7 @@ function navLinkFilter(
   return filteredJson.length === 0 ? false : filteredJson;
 }
 
+// information for the navbar content
 let navButtonLinks = [
   {
     btn_title: "home",

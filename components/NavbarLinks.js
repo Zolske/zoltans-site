@@ -27,7 +27,7 @@ export default function NavbarLinks({
           onMouseEnter={() => setOn_leave_nav_top(true)}
         >
           <h2 className={`${styles.list_header}`}>
-            links to the "{btn_title}" pages:
+            links to the &quot;{btn_title}&quot; pages:
           </h2>
           {jsonObject.map((entry) => (
             <div className={`${styles.dropdown}`} key={entry.dirTitle}>

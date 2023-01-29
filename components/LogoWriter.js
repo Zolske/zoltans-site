@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "../styles/modules/LogoWriter.module.css";
-import useIsVisible from "../hooks/useIsVisible";
 
-export default function LogoWriter({ logo_1, logo_2, logo_3, phrases }) {
+export default function LogoWriter({ logo_1, logo_2, logo_3 }) {
   const [logo_text_1, setLogo_text_1] = useState("");
   const [logo_text_2, setLogo_text_2] = useState("");
   const [logo_text_3, setLogo_text_3] = useState("");

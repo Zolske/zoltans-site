@@ -1,15 +1,1 @@
-[
-  {
-    "dirTitle": "Projects",
-    "links": [
-      {
-        "id": "pagesprojectsindex",
-        "linkTitle": "Projects",
-        "linkHref": "/projects",
-        "directories": ["projects"],
-        "path": "pages/projects/index.js"
-      }
-    ],
-    "icon": false
-  }
-]
+[{"dirTitle":"Projects","links":[{"id":"pagesprojectsindex","linkTitle":"Projects","linkHref":"/projects/index","directories":["projects"],"path":"pages/projects/index.js"}],"icon":false}]
