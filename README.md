@@ -1,4 +1,4 @@
-![Zoltan's logo](../zoltans-website/assets/images/logo/zoltan_logo.png)
+![Zoltan's logo](./assets/images/logo/zoltan_logo.png)
 
 # Zoltan's Website
 
@@ -26,4 +26,4 @@ _link to "Zoltan's Website" ->_ [zoltan.kepes.com](https://www.zoltankepes.com/)
 - project-directories are shown as link-folders in the navbar
 - images in the projects "**public/icons/**" directory with the same **name** as one of the directories, are added as icon to the link-folder
 
-_see [auto-page-navbar](../zoltans-website/assets/documentation/auto-page-navbar.md) documentation for more details_
+_see [auto-page-navbar](./assets/documentation/auto-page-navbar.md) documentation for more details_
