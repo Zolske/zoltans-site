@@ -1,9 +1,7 @@
-import styles from "./Navbar.module.css";
+import styles from "../styles/modules/Navbar.module.css";
 import { useState } from "react";
 import Image from "next/image";
-import logo_icon from "../assets/images/logo/icon_red.png";
-import logo_zoltan from "../assets/images/logo/zoltan_blue.png";
-import logo_kepes from "../assets/images/logo/kepes_red.png";
+import logo_icon from "../assets/images/logo/logo_laptop_red.png";
 import NavbarLinks from "./NavbarLinks";
 import NavButton from "./NavButton";
 import LogoWriter from "./LogoWriter";

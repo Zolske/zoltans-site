@@ -1,4 +1,4 @@
-import styles from "./Footer.module.css";
+import styles from "../styles/modules/Footer.module.css";
 
 const textJson = require("./footer.json");
 const language = "eng"; // must be either "eng" or "de" for the text language (see navbar.json)

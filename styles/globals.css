@@ -1,26 +1,24 @@
 :root {
-
   /* colors */
---color-home:LightSkyBlue; /*hsl(203, 92%, 75%) LightSkyBlue*/
---color-about: LightSalmon;  /*hsl(17, 100%, 74%) LightSalmon*/
---color-certificates: limegreen; /*hsl(120, 61%, 50%) limegreen*/
---color-projects: dodgerblue; /*hsl(210, 100%, 56%) dodgerblue*/
---color-notes: peru; /*hsl(30, 59%, 53%) peru*/
---color-apps: DarkOrange; /*hsl(33, 100%, 50%) DarkOrange*/
---color-nav-image: Silver;
---color-text-title: #5b4f3f;
---color-main-header: silver;
---color-main-background: azure;
-
+  --color-home: LightSkyBlue; /*hsl(203, 92%, 75%) LightSkyBlue*/
+  --color-about: LightSalmon; /*hsl(17, 100%, 74%) LightSalmon*/
+  --color-certificates: limegreen; /*hsl(120, 61%, 50%) limegreen*/
+  --color-projects: dodgerblue; /*hsl(210, 100%, 56%) dodgerblue*/
+  --color-notes: peru; /*hsl(30, 59%, 53%) peru*/
+  --color-apps: DarkOrange; /*hsl(33, 100%, 50%) DarkOrange*/
+  --color-nav-image: Silver;
+  --color-text-title: #5b4f3f;
+  --color-main-header: silver;
+  --color-main-background: azure;
 }
 
-.main_style{
+.main_style {
   height: 100vh;
   background-color: var(--color-main-background);
 }
 
 h1,
 p {
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   color: var(--color-text-title);
 }
