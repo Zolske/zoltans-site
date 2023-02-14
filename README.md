@@ -24,6 +24,6 @@ _link to "Zoltan's Website" ->_ [zoltan.kepes.com](https://www.zoltankepes.com/)
 
 - if a page (.js) or a directory with pages is added under the project's "**pages/about**", "**pages/certificates**", "**pages/notes**", "**pages/projects**", "**pages/apps**" directory, then it will be automaticly added to the "website's navbar" as a working link
 - project-directories are shown as link-folders in the navbar
-- images in the project's "**public/icons/**" directory with the same **name** as one of the directories, are added as icon to the link-folder
+- images in the project's "**public/icons/**" directory with the same **name** as the directories, are added as icon to the link-folder in the website's navbar
 
 _see [auto-page-navbar](./assets/documentation/auto-page-navbar.md) documentation for more details_
