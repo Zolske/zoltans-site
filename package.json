@@ -6,6 +6,7 @@
     "dev": "next dev",
     "predev": "node ./lib/read_file.js",
     "build": "next build",
+    "prebuild": "node ./lib/read_file.js",
     "start": "next start",
     "lint": "next lint"
   },
