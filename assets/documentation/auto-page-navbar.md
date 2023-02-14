@@ -9,9 +9,9 @@ _The purpose of this feature is to add files and folders to the website's main n
 - folder and file names should be in lower case, to make it easier when typing the path into the "browser's search bar", but they also can contain capital letters
 - only `.js` files, no `.jsx` or `.tsx`
 - do not name a file "`index.js`", only the base files like **home, about, note, ...**
-- project directories are represented as link-folders which contain the links to the individual pages
+- project directories are represented as link-folders which contain the link(s) to the individual pages
   - empty folders without any files are not shown in the navbar
-  - folder can have suborders, but they are displayed as equal in the navbar, e.g. project: `pages/notes/javaScript/subfolder/example.js` is displayed on the website's navbar as: **JavaScript Subfolder**
+  - folder can have subfolder, but they are displayed equal in the navbar, e.g. project: `/pages/notes/javaScript/subfolder/example.js` is displayed on the website's navbar as: **JavaScript Subfolder**
   - underscores "`_`" are replaced with an empty space
   - the beginning of every word is capitalized
   - e.g. the directory in the project "**CSS_components**" becomes the link-folder "**CSS Components**" in the navbar
@@ -33,6 +33,6 @@ _The purpose of this feature is to add files and folders to the website's main n
 
 - the npm **[directory-tree](https://www.npmjs.com/package/directory-tree)** package has been used to "Creates a JavaScript object representing a directory tree"
 - the function `createJsonFile()` combines all other functions from the file
-  - 1st argument is the path to where the folder structure is saved as Json data
-  - 2nd argument is the path to the directory which will be read
+  - 1st argument is the path to where the folder structure is saved as Json data (_`/assets/data/nav_links/`_)
+  - 2nd argument is the path to the directory which will be read (_`/pages/`_)
 - the Json file is then used by the "navbar component" to create the structure for the navbar"assets/data/nav_links/nav_notes.json", "pages/notes"
