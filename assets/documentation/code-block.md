@@ -7,7 +7,7 @@
 - import the `CodeBlock` component
 - props:
   - `codeBlock={codeSample}` (**mandatory**)
-    - `codeSample` constant as string within "backticks" ` "``" `
+    - `codeSample` constant containing the code-block as string within "backticks" ` "``" `
   - `language={"language-jsx"}` (**mandatory**) ([prism doc](https://prismjs.com/#supported-languages))
     - `"language-jsx"` the language needs to be specified, see list of supported [languages](https://prismjs.com/#supported-languages), **language-XXXX**
     - **note:** you may need to update the components language imports, _see below for more details_
@@ -100,7 +100,7 @@ export default function buttons({}) {
 ![small file tree](../images/documentation/fileTreeSmall.webp)
 
 - _tip:_ use the **CLI** with the `tree` command:
-  - copy the output and use it as prop input
+  - copy the output and use it as prop input, (_see `man tree` for more options_)
 
 ```bash
 tree /path/to/directory
