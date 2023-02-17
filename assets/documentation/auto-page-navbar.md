@@ -36,3 +36,5 @@ _The purpose of this feature is to add files and folders to the website's main n
   - 1st argument is the path to where the folder structure is saved as Json data (_`/assets/data/nav_links/`_)
   - 2nd argument is the path to the directory which will be read (_`/pages/`_)
 - the Json file is then used by the "navbar component" to create the structure for the navbar"assets/data/nav_links/nav_notes.json", "pages/notes"
+
+[&#X21e7; back to the "README" &#X21e7;](../../README.md)

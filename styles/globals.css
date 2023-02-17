@@ -22,3 +22,17 @@ p {
   font-family: "Merienda", cursive;
   color: var(--color-text-title);
 }
+
+/* >>> start >>> overwrite prismjs code block styles and file tree (node_modules/prismjs/plugins ... */
+.line-highlight {
+  background: linear-gradient(
+    to right,
+    hsla(26, 100%, 51%, 0.1) 90%,
+    hsla(24, 82%, 29%, 0.1)
+  ) !important;
+}
+
+.toolbar-item {
+  margin: 0 4px;
+}
+/* <<< end <<< ////////////////////////////////////////////////////////////////////////////////////// */
